@@ -1,5 +1,5 @@
 :root{
-    --cor-pricipal: #363636;
+    --preto: #363636;
     --vermelho: #ee1f1f;
     --azul: #062f4f;
 }
@@ -12,10 +12,21 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    width: 100%;
+    height: 900px;
+}
+
 /*HEADER*/
 .cabeçalho{
-    background-color: var(--cor-pricipal);
-    height: 130px;
+    position: fixed;
+    background-color: var(--preto);
+    width: 100%;
+    height: 100px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -45,7 +56,7 @@
     align-items: center;
     width:300px;
     height: 40px;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .btns li{
@@ -68,21 +79,93 @@
     background-color: #eee;
 }
 
+.red-border{
+    border: 2px solid #f00;
+}
+
 /*ROBOTS EXAMPLES*/
-.robots{
+#robots{
     padding: 40px;
+    padding-top: 100px;
+    background-color: var(--azul);
+}
+
+#titlebot{
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .images{
+    height: 700px;
+    border: 2px solid #00f;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.imgvert{
-    width: 200px;
-    height: 200px;
+.row1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.imghori{
-    width: 200px;
-    height: 200px;
+.row2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.retangulo{
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.retangulo img{
+    height: 300px;
+}
+
+img{
+    width: 100%;
+}
+
+.quadrado{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.quadrado img{
+    height: 250px;
+}
+
+/*ABOUT*/
+#about{
+    background-color: var(--vermelho);
+    padding: 40px;
+    padding-top: 100px;
+    color: white;
+}
+
+/*CONTACT*/
+#contact{
+    background-color: var(--azul);
+    padding: 40px;
+    padding-top: 110px;
+    color: white;
+}
+
+.rodape{
+    height: 40px;
+    background-color: var(--preto);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape p{
+    font-style: italic;
+    font-size: 1.2em;
 }

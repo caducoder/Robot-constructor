@@ -1,5 +1,5 @@
 :root{
-    --preto: #363636;
+    --preto: #000;
     --vermelho: #ee1f1f;
     --azul: #062f4f;
 }
@@ -146,18 +146,63 @@ img{
     padding: 40px;
     padding-top: 100px;
     color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleabout{
+    margin-bottom: 20px;
+}
+
+.txtabout{
+    width: 40%;
+    font-size: 1.1em;
+}
+
+.imgabout{
+    width: 50%;
 }
 
 /*CONTACT*/
 #contact{
-    background-color: var(--azul);
+    background-image: url(./img/foto3.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 40px;
-    padding-top: 110px;
+    padding-top: 60px;
+    height: 790px;
+    
+}
+
+.ct-area{
+    border: 1px solid white;
+    height: 80%;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.4);
+    filter: blur();
+    color: black;
+}
+
+.icons{
+    margin-top: 20px;
+}
+
+.icons i{
+    margin-right: 10px;
+}
+.icons a{
+    text-decoration: none;
+    color: black;
+}
+
+.icon-co:hover{
     color: white;
 }
 
+/*RODAPE*/
 .rodape{
-    height: 40px;
+    height: 50px;
     background-color: var(--preto);
     color: white;
     display: flex;
@@ -168,4 +213,13 @@ img{
 .rodape p{
     font-style: italic;
     font-size: 1.2em;
+}
+
+.rodape p a{
+    text-decoration: none;
+    color: white;
+}
+
+.rodape p a:hover{
+    color: var(--azul);
 }

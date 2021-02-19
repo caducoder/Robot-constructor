@@ -29,6 +29,7 @@ section{
     height: 100px;
     color: white;
     display: flex;
+    /*display: none;*/
     justify-content: space-between;
     align-items: center;
 }
@@ -79,15 +80,15 @@ section{
     background-color: #eee;
 }
 
-.red-border{
-    border: 2px solid #f00;
+.borda1{
+    border: 2px solid rgb(208, 255, 0);
 }
 
 /*ROBOTS EXAMPLES*/
 #robots{
-    padding: 40px;
-    padding-top: 100px;
+    padding: 100px 40px 0px 40px;
     background-color: var(--azul);
+    height: 950px;
 }
 
 #titlebot{
@@ -98,7 +99,6 @@ section{
 
 .images{
     height: 700px;
-    border: 2px solid #00f;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -143,11 +143,12 @@ img{
 /*ABOUT*/
 #about{
     background-color: var(--vermelho);
-    padding: 40px;
-    padding-top: 100px;
+    padding: 50px 40px 0 40px;
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 950px;
 }
 
 .titleabout{
@@ -163,25 +164,53 @@ img{
     width: 50%;
 }
 
-/*CONTACT*/
-#contact{
-    background-image: url(./img/foto3.jpg);
+/*SERVICES*/
+#services{
+    background-image: url(./img/foto0.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     padding: 40px;
     padding-top: 60px;
     height: 790px;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.svc{
+    border: 1px solid white;
+    height: 70%;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.5);
+    filter: blur();
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.svc-types{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.svc_titles{
+    margin-bottom: 10px;
+}
+
+.svc_txt{
+    padding: 5px 20px 0px 20px;
+    text-align: justify;
 }
 
 .ct-area{
     border: 1px solid white;
-    height: 80%;
+    height: 20%;
     padding: 20px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.5);
     filter: blur();
     color: black;
+    text-align: center;
 }
 
 .icons{

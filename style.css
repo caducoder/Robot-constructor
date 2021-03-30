@@ -1,8 +1,9 @@
 :root{
-    --corPrimaria: rgb(33, 33, 209);
-    --corSecundaria: #fff;
-    --azul: #062f4f;
+    --corPrimaria: #1e78d2;
+    --corSecundaria: #155493;
+    --corTerciaria: #f1f7fd;
     --corTextPrimaria: #000;
+    --corTextSecundaria: #fff;
 }
 
 *{
@@ -71,19 +72,17 @@ section{
 }
 
 .btns li a{
-    background-color: var(--corSecundaria);
     margin: 2px;
     padding: 7px;
     text-decoration: none;
-    color: var(--corTextPrimaria);
+    color: var(--corTextSecundaria);
     border-radius: 5px;
     font-weight: bold;
-    box-shadow: 0 4px 8px #aaa;
     transition: all 0.3s ease 0s;
 }
 
 .btns li a:hover{
-    background-color: #eee;
+    background-color: var(--corSecundaria);
 }
 
 .borda1{
@@ -93,12 +92,12 @@ section{
 /*ROBOTS EXAMPLES*/
 #robots{
     padding: 100px 40px 0px 40px;
-    background-color: var(--azul);
+    background-color: var(--corTerciaria);
     height: min-content;
 }
 
 #titlebot{
-    color: white;
+    color: var(--corTextPrimaria);
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -130,9 +129,9 @@ section{
 
 /*ABOUT*/
 #about{
-    background-color: var(--corSecundaria);
-    padding: 20px 10px;
-    color: var(--corTextPrimaria);
+    background-color: var(--corPrimaria);
+    padding: 100px 10px 40px;
+    color: var(--corTextSecundaria);
     height: min-content;
 }
 
@@ -160,22 +159,18 @@ section{
     padding: 40px;
     padding-top: 60px;
     height: min-content;
-    background-color: burlywood;
+    background-color: var(--corSecundaria);
 }
 
 .banner-svc img{
     width: 100%;
-    height: 100%;
 }
 
-#services .banner-svc{
-    max-height: 300px;
-}
 
 .svc{
     height: 70%;
     padding: 20px;
-    color: var(--corTextPrimaria);
+    color: var(--corTextSecundaria);
     text-align: center;
 }
 
@@ -212,7 +207,7 @@ section{
 }
 .icons a{
     text-decoration: none;
-    color: black;
+    color: var(--corTextPrimaria);
 }
 
 .icon-co:hover{
@@ -241,7 +236,7 @@ section{
 }
 
 .rodape p a:hover{
-    color: var(--azul);
+    color: var(--corSecundaria);
 }
 
 /*RESPONSIVE*/
@@ -268,7 +263,6 @@ section{
     }
     #robots{
         padding: 10px 20px 0px;
-        background-color: var(--azul);
         min-height: 950px;
     }
     .row{
@@ -313,7 +307,6 @@ section{
 
         height: 75%;
         padding: 0px;
-        color: var(--corTextPrimaria);
         text-align: center;
     }
 }

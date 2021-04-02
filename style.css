@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
 :root{
     --corPrimaria: #1e78d2;
     --corSecundaria: #155493;
     --corTerciaria: #f1f7fd;
+    --corQuartenaria: #0f3959;
     --corTextPrimaria: #000;
     --corTextSecundaria: #fff;
 }
@@ -11,7 +14,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html{
@@ -33,7 +36,7 @@ section{
     position: fixed;
     background-color: var(--corPrimaria);
     width: 100%;
-    height: 100px;
+    height: 80px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -198,6 +201,7 @@ section{
     align-items: center;
     min-height: 100vh;
     background: #112d42;
+    
 }
 .ct-area::before{
     content: '';
@@ -222,7 +226,7 @@ section{
     top: 40px;
     width: 350px;
     height: calc(100% - 80px);
-    background: #0f3959;
+    background: var(--corQuartenaria);
     z-index: 1;
     padding: 40px;
     display: flex;
@@ -251,25 +255,28 @@ section{
     align-items: center;
 }
 
-.ct-area .container2 .contactinfo .info li span:nth-child(1){
+.ct-area .container2 .contactinfo .info li span:nth-child(1)
+{
     width: 30px;
     min-width: 30px;
 }
 
-.ct-area .container2 .contactinfo .info li span:nth-child(1) i{
+.ct-area .container2 .contactinfo .info li span:nth-child(1) i
+{
     max-width: 100%;
     filter: invert(1);
     opacity: 0.5;
 }
 
-.ct-area .container2 .contactinfo .info li span:nth-child(2){
+.ct-area .container2 .contactinfo .info li span:nth-child(2)
+{
     color: var(--corTextSecundaria);
-    margin-left: 40px;
+    margin-left: 20px;
     font-weight: 300;
     opacity: 0.5;
 }
 
-.ct-area .container2 .contactinfo .info li span:nth-child(1) i,
+.ct-area .container2 .contactinfo .info li:hover span:nth-child(1) i,
 .ct-area .container2 .contactinfo .info li:hover span:nth-child(2)
 {
     opacity: 1;
@@ -282,7 +289,7 @@ section{
 
 .ct-area .container2 .contactinfo .sci li{
     list-style: none;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .ct-area .container2 .contactinfo .sci li a{
@@ -305,9 +312,93 @@ section{
     box-shadow: 0 50px 50px rgba(0,0,0,0.5);
 }
 
+.ct-area .container2 .contactForm h2{
+    color: var(--corQuartenaria);
+    font-size: 24px;
+    font-weight: 500;
+    margin: 50px 30px 0;
+}
+
 .ct-area .container2 .contactForm .formBox{
     position: relative;
-    /*parei aqui*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.ct-area .container2 .contactForm .formBox .inputBox{
+    position: relative;
+    margin: 0 0 35px 0;
+}
+
+.ct-area .container2 .contactForm .formBox .inputBox.w50
+{
+    width: 47%;
+}
+
+.ct-area .container2 .contactForm .formBox .inputBox.w100
+{
+    width: 100%;
+}
+
+.ct-area .container2 .contactForm .formBox .inputBox input,
+.ct-area .container2 .contactForm .formBox .inputBox textarea
+{
+    width: 100% !important;
+    padding: 5px 0;
+    resize: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+
+.ct-area .container2 .contactForm .formBox .inputBox textarea
+{
+    min-height: 120px;
+}
+
+.ct-area .container2 .contactForm .formBox .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.ct-area .container2 .contactForm .formBox .inputBox input:focus ~ span,
+.ct-area .container2 .contactForm .formBox .inputBox textarea:focus ~ span,
+.ct-area .container2 .contactForm .formBox .inputBox input:valid ~ span,
+.ct-area .container2 .contactForm .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--corPrimaria);
+}
+
+.ct-area .container2 .contactForm .formBox .inputBox input[type="submit"]
+{
+    position: relative;
+    cursor: pointer;
+    background: var(--corQuartenaria);
+    color: var(--corTextSecundaria);
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+
+.ct-area .container2 .contactForm .formBox .inputBox input[type="submit"]:hover
+{
+    background: var(--corPrimaria);
 }
 
 /*RODAPE*/

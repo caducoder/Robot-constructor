@@ -38,10 +38,10 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
 }
 
-.info{
+.info1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +56,7 @@ section{
 
 #logo{
     width: 50px;
+    cursor: pointer;
 }
 
 .btns{
@@ -189,29 +190,124 @@ section{
     text-align: justify;
 }
 
+/* CONTACT */
 .ct-area{
-    height: 20%;
-    padding: 20px;
-    background-color: rgba(255,255,255,0.5);
-    color: var(--corTextPrimaria);
-    text-align: center;
-    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #112d42;
+}
+.ct-area::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #03a9f4;
 }
 
-.icons{
-    margin-top: 20px;
+.ct-area .container2{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 10;
 }
 
-.icons i{
-    margin-right: 10px;
-}
-.icons a{
-    text-decoration: none;
-    color: var(--corTextPrimaria);
+.ct-area .container2 .contactinfo{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #0f3959;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
 }
 
-.icon-co:hover{
-    color: white;
+.ct-area .container2 .contactinfo h2{
+    color: var(--corTextSecundaria);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.ct-area .container2 .contactinfo .info{
+    position: relative;
+    margin: 20px 0;
+}
+
+.ct-area .container2 .contactinfo .info li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: center;
+}
+
+.ct-area .container2 .contactinfo .info li span:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+}
+
+.ct-area .container2 .contactinfo .info li span:nth-child(1) i{
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+.ct-area .container2 .contactinfo .info li span:nth-child(2){
+    color: var(--corTextSecundaria);
+    margin-left: 40px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.ct-area .container2 .contactinfo .info li span:nth-child(1) i,
+.ct-area .container2 .contactinfo .info li:hover span:nth-child(2)
+{
+    opacity: 1;
+}
+
+.ct-area .container2 .contactinfo .sci{
+    position: relative;
+    display: flex;
+}
+
+.ct-area .container2 .contactinfo .sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+
+.ct-area .container2 .contactinfo .sci li a{
+    color: var(--corTextSecundaria);
+    opacity: 0.5;
+}
+
+.ct-area .container2 .contactinfo .sci li:hover a{
+    opacity: 1;
+}
+
+.ct-area .container2 .contactForm{
+    position: absolute;
+    padding-top: 70px 50px;
+    background: var(--corTextSecundaria);
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100% - 150px);
+    height: 100%;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+}
+
+.ct-area .container2 .contactForm .formBox{
+    position: relative;
+    /*parei aqui*/
 }
 
 /*RODAPE*/

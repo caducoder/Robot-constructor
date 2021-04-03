@@ -10,12 +10,8 @@
 </head>
 <body>
 
-
-    <header class="cabeçalho">
-        <div class="info1">
-            <p class="logo">LOGOMARCA</p>
-            <p class="pagetitle">Construção de robôs inteligentes.</p>
-        </div>
+    <header>
+        <h2 class="logo">LOGOMARCA</h2>
         <nav>
             <ul class="btns">
                 <li><a href="#robots">HOME</a></li>
@@ -27,35 +23,14 @@
     </header>
 
     <section id="robots">
-        <div class="container">
-
-            <h3 id="titlebot">Exemplos de robôs</h3>
-            <div class="images">
-                <div class="row">
-                    <div class="column">
-                        <img src="./img/foto1.jpg" alt="robot photo">
-                    </div>
-                    <div class="column">
-                        <img src="./img/jason-leung-1DjbGRDh7-E-unsplash.jpg" alt="robot photo">
-                    </div>
-                    <div class="column">
-                        <img src="./img/pat-krupa-vW-rB_wSoSg-unsplash.jpg" alt="robot photo">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <img src="./img/foto5.jpg" alt="robot photo">
-                    </div>
-                    <div class="column">
-                        <img src="./img/foto4.jpg" alt="robot photo">
-                    </div>
-                    <div class="column">
-                        <img src="./img/possessed-photography-JjGXjESMxOY-unsplash.jpg" alt="robot photo">
-                    </div> 
-                </div> 
-            </div>
-
-        </div>
+        <img src="./img/foto8.jpg" alt="robot photo" class="slider">
+        <ul class="navigation">
+            <li onclick="imgSlider('./img/foto12.jpg')"><img src="./img/foto12.jpg" alt="robot photo"></li>
+            <li onclick="imgSlider('./img/foto8.jpg')"><img src="./img/foto8.jpg" alt="robot photo"></li>
+            <li onclick="imgSlider('./img/foto5.jpg')"><img src="./img/foto5.jpg" alt="robot photo"></li>
+            <li onclick="imgSlider('./img/foto7.jpg')"><img src="./img/foto7.jpg" alt="robot photo"></li>
+        </ul>
+        <h2>Construção de robôs inteligentes.</h2>
     </section>
 
     <section id="about">
@@ -180,5 +155,10 @@
         <p>Desenvolvido por <a href="https://github.com/caducoder" target="_blank">Caducoder</a></p>
     </footer>
     
+    <script>
+        function imgSlider(any){
+            document.querySelector(".slider").src = any;
+        }
+    </script>
 </body>
 </html>

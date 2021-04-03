@@ -19,6 +19,8 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    margin-top: -60px;
 }
 
 section{
@@ -31,34 +33,20 @@ section{
     margin: 0 auto;
 }
 
-/*HEADER*/
-.cabeçalho{
-    position: fixed;
-    background-color: var(--corPrimaria);
-    width: 100%;
-    height: 80px;
-    color: white;
+/* HEADER */
+header{
+    position: sticky;
     display: flex;
+    top: 10px;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    padding: 10px 40px;
+    z-index: 1000;
+    width: 100%;
 }
 
-.info1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
-}
-
-.pagetitle{
-    font-size: 1.5em;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-#logo{
-    width: 50px;
+.logo{
+    color: var(--corTextSecundaria);
     cursor: pointer;
 }
 
@@ -90,50 +78,66 @@ section{
 }
 
 .borda1{
-    border: 2px solid rgb(69, 78, 30);
+    border: 2px solid #000;
 }
 
-/*ROBOTS EXAMPLES*/
 #robots{
-    padding: 100px 40px 0px 40px;
-    background-color: var(--corTerciaria);
-    height: min-content;
-}
-
-#titlebot{
-    color: var(--corTextPrimaria);
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.images{
-
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
 }
 
-.row{
-    width: 100%;
-    max-width: 980px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
-.column{
-    flex: 33.33%;
-    padding: 5px;
-}
-
-#robots img{
+#robots .slider{    
+    position: absolute;
+    top: 0px;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+#robots .navigation{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation li{
+    list-style: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.navigation li img{
+    width: 150px;
+    height: 100px;
+    border: 4px solid #fff;
+    border-radius: 4px;
+}
+
+#robots h2{
+    position: absolute;
+    z-index: 100;
+    font-size: 4em;
+    text-align: center;
+    max-width: 2000px;
+    text-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    color: var(--corTextSecundaria);
 }
 
 /*ABOUT*/
 #about{
-    background-color: var(--corPrimaria);
+    background-color: var(--corQuartenaria);
     padding: 100px 10px 40px;
     color: var(--corTextSecundaria);
     height: min-content;
@@ -382,7 +386,7 @@ section{
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 1px;
-    color: var(--corPrimaria);
+    color: #ED145B;
 }
 
 .ct-area .container2 .contactForm .formBox .inputBox input[type="submit"]
@@ -398,13 +402,13 @@ section{
 
 .ct-area .container2 .contactForm .formBox .inputBox input[type="submit"]:hover
 {
-    background: var(--corPrimaria);
+    background: #ED145B;
 }
 
 /*RODAPE*/
 .rodape{
     height: 50px;
-    background-color: var(--corPrimaria);
+    background-color: var(--corTextPrimaria);
     color: white;
     display: flex;
     justify-content: center;
@@ -428,22 +432,13 @@ section{
 
 /*RESPONSIVE*/
 @media screen and (max-width: 500px) {
-    .cabeçalho{
+    header{
         position: relative;
         flex-direction: column;
         height: 180px;
         justify-content: center;
-    }
-    .pagetitle{
-        text-align: center;
-        margin: 0;
-    }
-    .info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 20px;
+        background-color: black;
+        padding-top: 90px;
     }
     .btns{
         margin: 0;
@@ -452,12 +447,7 @@ section{
         padding: 10px 20px 0px;
         min-height: 950px;
     }
-    .row{
-        flex-direction: column;
-    }
-    .column{
-        width: 100%;
-    }
+    
     #about{
         background-color: var(--corSecundaria);
         padding: 0;

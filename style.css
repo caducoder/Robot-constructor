@@ -336,14 +336,9 @@ header{
     margin: 0 0 35px 0;
 }
 
-.ct-area .container2 .contactForm .formBox .inputBox.w50
-{
-    width: 47%;
-}
-
 .ct-area .container2 .contactForm .formBox .inputBox.w100
 {
-    width: 100%;
+    width: 90%;
 }
 
 .ct-area .container2 .contactForm .formBox .inputBox input,

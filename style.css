@@ -210,12 +210,20 @@ header{
 /*SERVICES*/
 #services{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: black;
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(img/foto0.jpg);
     background-position: center;
+}
+
+#services h2{
+    color: white;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    font-size: 42px;
 }
 
 .container3{

@@ -7,5 +7,5 @@ Um site fictício para prática de HTML e CSS.
 
 ## Futuras adições
  - Um footer mais elaborado
- - Melhorar a seção "Sobre"
- - Modificar a seção de serviços
+ - Melhorar a seção "Sobre" ✔
+ - Modificar a seção de serviços ✔

@@ -28,11 +28,6 @@ section{
     height: min-content;
 }
 
-.container{
-    max-width: 980px;
-    margin: 0 auto;
-}
-
 /* HEADER */
 header{
     position: sticky;
@@ -137,29 +132,79 @@ header{
 
 /*ABOUT*/
 #about{
-    background-color: var(--corQuartenaria);
-    padding: 100px 10px 40px;
-    color: var(--corTextSecundaria);
-    height: min-content;
-}
-
-#about .container{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.titleabout{
-    margin-bottom: 20px;
-}
-
-.txtabout{
-    font-size: 1.1em;
-}
-
-.img-about img{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+}
+
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 300px;
+}
+
+.content-section{
+    float: left;
+    width: 55%;
+}
+
+.image-section{
+    float: right;
+    width: 40%;
+}
+
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+
+.content-section .title{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.content-section .content h3{
+    margin-top: 20px;
+    color: #5d5d5d;
+}
+
+.content-section .content p{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content-section .content .button{
+    margin-top: 30px;
+}
+
+.content-section .content .button a{
+    background-color: #3d3d3d;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.content-section .content .button a:hover{
+    background-color: #a52a2a;
+}
+
+.content-section .social{
+    margin: 40px 0px;
+}
+
+.content-section .social i{
+    color: #a52a2a;
+    font-size: 30px;
+    padding: 0px 20px;
+}
+
+.content-section .social i:hover{
+    color: #3d3d3d;
 }
 
 /*SERVICES*/
@@ -487,50 +532,42 @@ header{
         background-color: black;
         padding-top: 90px;
     }
-    .btns{
-        margin: 0;
+    /*ABOUT US*/
+    .container{
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 50px;
     }
-    #robots{
-        padding: 10px 20px 0px;
-        min-height: 950px;
+    .content-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
     }
-    
-    #about{
-        background-color: var(--corSecundaria);
-        padding: 0;
-        height: min-content;
+    .image-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
     }
-    #about .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .image-section img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
     }
-    .txtabout{
-        width: 90%;
-        font-size: 1em;
-        margin-bottom: 30px;
+    .content-section .title{
+        text-align: center;
+        font-size:19px;
     }
-    .imgabout{
-        width: 90%;
+    .content-section .content .button{
+        text-align: center;
     }
-    .svc-types{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 20px;
+    .content-section .content .button a{
+        padding: 9px 30px;
     }
-    .svc_txt{
-        padding: 5px 20px 0px 20px;
-        font-size: 0.9em;
-        text-align: justify;
-    }
-    .svc_titles{
-        font-size: 1em;
-    }
-    .svc{
-
-        height: 75%;
-        padding: 0px;
+    .content-section .social{
         text-align: center;
     }
 }
